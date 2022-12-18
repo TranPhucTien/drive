@@ -1,8 +1,18 @@
+:root {
+    --header-height: 105px;
+    --sidebar-width: 250px;
+}
+
 /* Reset css */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    color: #000;
 }
 
 a {
@@ -51,9 +61,12 @@ button:hover {
     top: 0;
     left: 0;
     right: 0;
+    height: var(--header-height);
     padding: 8px;
+    background: #fff;
     border-bottom: 1px solid #ccc;
     box-shadow: 4px -3px 12px #5f6368;
+    z-index: 9;
 }
 
 .header__container {
@@ -154,4 +167,89 @@ button:hover {
 .breadcrumb .active .icon {
     margin-right: 12px;
     margin-left: 8px;
+}
+
+/* ------------------------ Sidebar ------------------------ */
+.sidebar {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: var(--sidebar-width);
+    background: #fff;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+.sidebar__list {
+    list-style-type: none;
+    margin-top: 20px;
+    margin-left: -8px;
+}
+
+.sidebar__item {
+    --height: 40px;
+    height: 40px;
+    padding-left: 8px;
+    border: 1px solid transparent;
+    border-radius: 0 66px 66px 0;
+    line-height: var(--height);
+    font-size: 16px;
+    color: rgb(95, 99, 104);
+    cursor: pointer;
+}
+
+.sidebar__item > span {
+    font-weight: 700;
+    margin-left: 16px;
+}
+
+.sidebar__item:hover {
+    background: rgba(95,99,104, 0.1);
+}
+
+.sidebar__item.active {
+    background-color: var(--dt-primary-container, rgb(232, 240, 254));
+    color: rgb(24, 90, 188);
+}
+
+.content {
+    margin-top: var(--header-height);
+    margin-left: var(--sidebar-width);
+    width: calc(100% - --sidebar-width);
+}
+
+table {
+    width: 100%;
+    padding-top: 20px;
+    margin-right: 12px;
+    border-collapse: collapse;
+}
+
+table tr {
+    height: 48px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    font-weight: 500;
+}
+
+table tr:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+table tr:first-child {
+    position: sticky;
+    top: var(--header-height);
+    font-weight: 500;
+    color: #3c4043;
+    font-size: 14px;
+}
+
+table tr th:first-child,
+table tr td:first-child {
+    padding-left: 16px;
+}
+
+table tr.active {
+    color: rgb(66, 133, 244);
+    background: rgba(66, 133, 244, 0.1);
 }
