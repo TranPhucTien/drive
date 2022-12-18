@@ -1,0 +1,157 @@
+/* Reset css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input {
+    outline: none;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.icon--small {
+    font-size: 16px;
+}
+
+.icon--medium {
+    font-size: 18px;
+}
+
+.icon--large {
+    font-size: 24px;
+}
+
+.button {
+    min-width: 100px;
+    padding: 6px 16px;
+    background: #4285f4;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+}
+
+/* ------------------------------------ Header ------------------------------------ */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 4px -3px 12px #5f6368;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__container ~ .header__container {
+    margin-top: 12px;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header__logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.header__logo span {
+    padding-left: 4px;
+    color: #5f6368;
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.header__search {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 720px;
+    height: 48px;
+    background: rgb(241, 243, 244);
+    border-radius: 8px;
+}
+
+.header__search .icon {
+    color: #5f6368;
+    padding: 8px;
+    padding: 0 16px;
+    cursor: pointer;
+}
+
+.header__search input {
+    background: transparent;
+    width: 560px;
+    max-width: 100%;
+    margin-right: auto;
+    font-size: 16px;
+    flex: 1;
+}
+
+.header__action {
+    display: flex;
+    align-items: center;
+}
+
+.header__action .icon {
+    margin-right: 16px;
+    color: rgb(95, 99, 104);
+    cursor: pointer;
+}
+
+.header__action > :last-child {
+    margin-right: 0;
+}
+
+.header__action .avatar {
+    border-radius: 50%;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    max-width: 720px;
+    font-size: 18px;
+    color: #5f6368;
+    font-weight: 500;
+    flex: 1;
+}
+
+.icon-right {
+    margin: 2px 0;
+    padding: 4px 8px 4px;
+    font-size: 16px;
+}
+
+.breadcrumb .active {
+    display: flex;
+    align-items: center;
+    color: #3c4043;
+}
+
+.breadcrumb .active .icon {
+    margin-right: 12px;
+    margin-left: 8px;
+}
